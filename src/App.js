@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EmployeeSearch from './components/EmployeeSearch';
+import EmployeeTable from './components/EmployeeTable';
 import './App.css';
+import logo from 'C:/Users/sanch/dummy-frontend/src/dummy.png';
+
 
 function App() {
+  
+  const [employeeData, setEmployeeData] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="/">
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: '100px', marginRight: '40px' }} 
+          />
+          Dummy API
         </a>
-      </header>
+      </nav>
+      <main>
+        <EmployeeSearch setEmployeeData={setEmployeeData} />
+        <EmployeeTable employeeData={employeeData} />
+      </main>
     </div>
   );
 }
