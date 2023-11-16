@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import EmployeeSearch from './components/EmployeeSearch';
 import EmployeeTable from './components/EmployeeTable';
 import './App.css';
+//Logo taken from https://bigbuckclub.com/become-a-partner/dummy-logo-2/
 import logo from 'C:/Users/sanch/dummy-frontend/src/dummy.png';
 
 
